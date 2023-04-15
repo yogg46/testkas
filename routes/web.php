@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\Kasir;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Kasir::class, 'index']);
 Route::post('/save-total', [Kasir::class, 'store'])->name('save-total');;
+Route::get('/new',[ImageController::class,'index']);
+Route::post('/simpan',[ImageController::class,'store'])->name('simpan');
